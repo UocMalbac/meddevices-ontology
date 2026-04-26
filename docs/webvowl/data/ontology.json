@@ -1,0 +1,2470 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "An ontology about medical devices and their risks"
+    },
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "version" : "1.0.0",
+    "author" : [ "Miquel Alba Castelló" ],
+    "description" : {
+      "en" : "dc:description\n\nThis is an ontology on the European catalog of medical devices of high risk and in vitro diagnostic devices. Based on the MDR Regulation (EU 2017/745) and the IVDR Regulation (EU 2017/746)"
+    },
+    "labels" : {
+      "undefined" : "meddevice"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Miquel Alba Castelló",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2026-04-26",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "An ontology about medical devices and their risks",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "http://data.europa.eu/eli/reg/2017/745/oj",
+        "type" : "label"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "http://data.europa.eu/eli/reg/2017/746/oj",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "69",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "103",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "106",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#DiagnosticRisk",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DiagnosticRisk",
+      "en" : "DiagnosticRisk"
+    },
+    "comment" : {
+      "en" : "An incident that has a diagnostic risk."
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableActiveDevice",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImplantableActiveDevice",
+      "en" : "ImplantableActiveDevice"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001",
+      "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+      "labels" : {
+        "IRI-based" : "dev001"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003",
+      "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+      "labels" : {
+        "IRI-based" : "rsk003"
+      }
+    } ],
+    "comment" : {
+      "en" : "A device that needs energy and that is implantable."
+    },
+    "id" : "11",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveDevice",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActiveDevice",
+      "en" : "ActiveDevice"
+    },
+    "comment" : {
+      "en" : "A device that needs energy."
+    },
+    "id" : "15",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#UserNotice",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UserNotice",
+      "en" : "UserNotice"
+    },
+    "comment" : {
+      "en" : "A corrective action noticed by user."
+    },
+    "id" : "16",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Risk",
+        "type" : "label"
+      } ],
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Risk",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Risk",
+      "en" : "Risk"
+    },
+    "subClasses" : [ "0", "24", "25", "26", "27", "28", "29", "30", "31", "32" ],
+    "comment" : {
+      "en" : "A class that contains a catalog of risks identified according to the IMDRF nomenclature."
+    },
+    "id" : "1",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableDevice",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImplantableDevice",
+      "en" : "ImplantableDevice"
+    },
+    "comment" : {
+      "en" : "An implantable device."
+    },
+    "id" : "39",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "23",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InjuryRisk",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InjuryRisk",
+      "en" : "InjuryRisk"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003",
+      "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+      "labels" : {
+        "IRI-based" : "rsk003"
+      }
+    } ],
+    "comment" : {
+      "en" : "An incident that carries a risk of injury."
+    },
+    "id" : "24",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Corrective Action",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CorrectiveAction",
+      "en" : "CorrectiveAction"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fsca001",
+      "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+      "labels" : {
+        "IRI-based" : "fsca001"
+      }
+    } ],
+    "subClasses" : [ "45", "16", "46", "47" ],
+    "comment" : {
+      "en" : "A class with field safety corrective actions (FSCA) linked to incidents."
+    },
+    "id" : "17",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SafetyAlert",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SafetyAlert",
+      "en" : "SafetyAlert"
+    },
+    "comment" : {
+      "en" : "Any corrective action that involves a health alert."
+    },
+    "id" : "45",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Medical Device",
+        "type" : "label"
+      } ],
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://publications.europa.eu/resource/authority/class-sum-leg/2403020204",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Device",
+      "en" : "Device"
+    },
+    "subClasses" : [ "49", "11", "50", "15", "51", "52", "39" ],
+    "comment" : {
+      "en" : "A class that includes a catalog of devices with their risk class, manufacturer and type."
+    },
+    "id" : "12",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#NearMissIncident",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NearMissIncident",
+      "en" : "NearMissIncident"
+    },
+    "comment" : {
+      "en" : "Incident almost gone."
+    },
+    "id" : "54",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "57",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "58",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "61",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "62",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "63",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "64",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "65",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "66",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "69",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SelfTestDevice",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SelfTestDevice",
+      "en" : "SelfTestDevice"
+    },
+    "comment" : {
+      "en" : "A self test device."
+    },
+    "id" : "50",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "81",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Medical Device",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://publications.europa.eu/resource/authority/class-sum-leg/2403020204",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MedicalDevice",
+      "en" : "MedicalDevice"
+    },
+    "subClasses" : [ "17", "43", "1", "12", "6" ],
+    "comment" : {
+      "en" : "The pattern that describes the set of classes of the Ontology."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "84",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RegulatoryFramework",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RegulatoryFramework",
+      "en" : "RegulatoryFramework"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ivdr",
+      "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+      "labels" : {
+        "IRI-based" : "ivdr"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#mdr",
+      "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+      "labels" : {
+        "IRI-based" : "mdr"
+      }
+    } ],
+    "comment" : {
+      "en" : "The regulatory framework for device."
+    },
+    "id" : "3"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "86",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "89",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Recall",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Recall",
+      "en" : "Recall"
+    },
+    "comment" : {
+      "en" : "Any corrective action that needs a recall."
+    },
+    "id" : "47",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "68",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "88",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveImplant",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActiveImplant",
+      "en" : "ActiveImplant"
+    },
+    "comment" : {
+      "en" : "A device that can be implanted."
+    },
+    "id" : "49",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "94",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SingleUseDevice",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SingleUseDevice",
+      "en" : "SingeUseDevice"
+    },
+    "comment" : {
+      "en" : "A device for a single use."
+    },
+    "id" : "51",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "95",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Safety Incident",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Incident",
+      "en" : "Incident"
+    },
+    "subClasses" : [ "54", "97" ],
+    "comment" : {
+      "en" : "A class that collects reported incidents associated with specific devices."
+    },
+    "id" : "43",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "98",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "99",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "101",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "103",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InSituCorrection",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InSituCorrection",
+      "en" : "InSituCorrection"
+    },
+    "comment" : {
+      "en" : "Any corrective action with a correction made on place"
+    },
+    "id" : "46",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "78",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "105",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "106",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SeriousIncident",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SeriousIncident",
+      "en" : "SeriousIncident"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001",
+      "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+      "labels" : {
+        "IRI-based" : "inc001"
+      }
+    } ],
+    "comment" : {
+      "en" : "Serious incident."
+    },
+    "id" : "97",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InterferenceRisk",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InterferenceRisk",
+      "en" : "InterferenceRisk"
+    },
+    "comment" : {
+      "en" : "An incident that poses a risk of interference."
+    },
+    "id" : "28",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MalfunctionRisk",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MalfunctionRisk",
+      "en" : "MalfunctionRisk"
+    },
+    "comment" : {
+      "en" : "An incident that poses a risk of malfunction."
+    },
+    "id" : "30",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InVitroDiagnosticDevice",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InVitroDiagnosticDevice",
+      "en" : "InVitroDiagnosticDevice"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016",
+      "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+      "labels" : {
+        "IRI-based" : "dev016"
+      }
+    } ],
+    "comment" : {
+      "en" : "A device that can be used to in vitro diagnostic."
+    },
+    "id" : "52",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ContaminationRisk",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ContaminationRisk",
+      "en" : "ContaminationRisk"
+    },
+    "comment" : {
+      "en" : "An incident that has a Pollution Risk."
+    },
+    "id" : "26",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CybersecurityRisk",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CybersecurityRisk",
+      "en" : "CyberSecurityRisk"
+    },
+    "comment" : {
+      "en" : "An incident that has CyberSecurityRisk"
+    },
+    "id" : "27",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SoftwareRisk",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SoftwareRisk",
+      "en" : "SoftwareRisk"
+    },
+    "comment" : {
+      "en" : "An incident that represents a software risk."
+    },
+    "id" : "29",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MaterialRisk",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialRisk",
+      "en" : "MaterialRisk"
+    },
+    "comment" : {
+      "en" : "An incident that represents a material risk."
+    },
+    "id" : "31",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "80",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "135",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RadiationRisk",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RadiationRisk",
+      "en" : "RadiationRisk"
+    },
+    "comment" : {
+      "en" : "An incident that represents a radiation risk."
+    },
+    "id" : "25",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Authorising Entity",
+        "type" : "label"
+      } ],
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://publications.europa.eu/resource/authority/role/AUTHORI",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Manufacturer",
+      "en" : "Manufacturer"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man005",
+      "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+      "labels" : {
+        "IRI-based" : "man005"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001",
+      "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+      "labels" : {
+        "IRI-based" : "man001"
+      }
+    } ],
+    "comment" : {
+      "en" : "A class that contains the data of European manufacturers of medical devices (name, country, authorization number)."
+    },
+    "id" : "6",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InfectionRisk",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InfectionRisk",
+      "en" : "InfectionRisk"
+    },
+    "comment" : {
+      "en" : "An incident that has a risk of infection."
+    },
+    "id" : "32",
+    "superClasses" : [ "1" ]
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "5",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "107",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "110",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "115",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "118",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "119",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "120",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "121",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "125",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "126",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "127",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "128",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "129",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "130",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "131",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "132",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "133",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "134",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "136",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "137",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "138",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "139",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "140",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "141",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "142",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "143",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "144",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "145",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "146",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "147",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "148",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "149",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "150",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "151",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "152",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "153",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "154",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "155",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "156",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "157",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "158",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "159",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "160",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "161",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "162",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "163",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "164",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "166",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "167",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#regulatesDevice",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "regulatesDevice",
+      "en" : "regulatesDevice"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "This property links the  the regulatory framework with the device."
+    },
+    "attributes" : [ "object" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedSrn",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "eudamedSrn",
+      "en" : "eudamedSrn"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Data property thats shows the manufacturer eudamed number."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskId",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "riskId",
+      "undefined" : "riskId"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Data property that shows the identification number."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#description",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "description",
+      "en" : "description"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Data property that shows the risk description."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#scope",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "scope",
+      "en" : "scope"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "This data property shows the action scope."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedFscaRef",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "eudamedFscaRef",
+      "en" : "eudamedFscaRef"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "This data property shows when the eudamed FSCA related to the action."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDate",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "actionDate",
+      "en" : "actionDate"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "This data property shows when the action was taken."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRespondedBy",
+    "inverse" : "44",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "isRespondedBy",
+      "en" : "isRespondedBy"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This property shows which the relation betwees the incident and the corrective action."
+    },
+    "attributes" : [ "object" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#imdrfCode",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "imdrfCode",
+      "en" : "imdrfCode"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Data property that shows the imdrf code linked  to the risk."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturesDevice",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "manufacturesDevice",
+      "en" : "manufacturesDevice"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "A property created to recognize the manufacturer of the device."
+    },
+    "attributes" : [ "object" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eventDate",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "eventDate",
+      "en" : "eventDate"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This data property shows when the incident was."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#intendedPurpose",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "intendedPurpose",
+      "en" : "intendedPurpose"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Data proptery that shows the device intended purpose."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#closureDate",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "closureDate",
+      "en" : "closureDate"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "This data property shows when the action was closed."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskName",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "68",
+    "label" : {
+      "IRI-based" : "riskName",
+      "en" : "riskName"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Data property that shows the risk name.."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reports",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "reports",
+      "en" : "reports"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "This property shows which the incident of each manufacturer."
+    },
+    "attributes" : [ "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#correctiveActionTaken",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "correctiveActionTaken",
+      "en" : "correctiveActionTaken"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This property shows the corrective acction because of the incident."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "71"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk",
+    "inverse" : "75",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasRisk",
+      "en" : "hasRisk"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This property links an Incident to the Risk identified."
+    },
+    "attributes" : [ "object" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceId",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "deviceId",
+      "en" : "deviceId"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Data proptery that shows the device ID."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "78",
+    "label" : {
+      "IRI-based" : "isActive",
+      "en" : "isActive"
+    },
+    "cardinality" : "1",
+    "domain" : "12",
+    "comment" : {
+      "en" : "Data proptery that shows the device needs energy to operate."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDescription",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "actionDescription",
+      "en" : "actionDescription"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "This data property shows when the action description."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientAge",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "patientAge",
+      "en" : "patientAge"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This property shows the age of the patient involved in the incident"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportDate",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "88",
+    "label" : {
+      "IRI-based" : "reportDate",
+      "en" : "reportDate"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This data property shows when the incident was reported."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#severity",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "81",
+    "label" : {
+      "IRI-based" : "severity",
+      "en" : "severity"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Data property that shows the risk severity."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "90"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#contactEmail",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "contactEmail",
+      "en" : "contactEmail"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Data property thats shows the manufacturer email address."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#affectsDeviceType",
+    "inverse" : "93",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "affectsDeviceType",
+      "en" : "affectsDeviceType"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "This property show us which device is affected by the risk."
+    },
+    "attributes" : [ "object" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "69",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "96"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fscaId",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "fscaId",
+      "en" : "fcsaId"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "this data type shows the FCSA id."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentId",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "incidentId",
+      "en" : "incidentId"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This data property shows the incident id."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "102"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework",
+    "inverse" : "2",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasRegulatoryFramework",
+      "en" : "hasRegulatoryFramework"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "This property links the device  with the regulatory framework."
+    },
+    "attributes" : [ "object" ],
+    "id" : "104"
+  }, {
+    "range" : "12",
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "107"
+  }, {
+    "range" : "12",
+    "domain" : "52",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "108"
+  }, {
+    "range" : "4",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#udiDi",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "udiDi",
+      "en" : "udiDi"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Data proptery that shows the device UDI, string because ()."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "110"
+  }, {
+    "range" : "4",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "111"
+  }, {
+    "range" : "12",
+    "domain" : "51",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "105",
+    "label" : {
+      "IRI-based" : "isReusable",
+      "en" : "isReusable"
+    },
+    "cardinality" : "1",
+    "domain" : "12",
+    "comment" : {
+      "en" : "Data proptery that shows the device is reusable."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "113"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice",
+    "inverse" : "115",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasDevice",
+      "en" : "hasDevice"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This property links the device  and the incident."
+    },
+    "attributes" : [ "object" ],
+    "id" : "114"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isDeviceOf",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "isDeviceOf",
+      "en" : "isDeviceOf"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "This property links the incident and the device ."
+    },
+    "attributes" : [ "object" ],
+    "id" : "115"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskClass",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "86",
+    "label" : {
+      "IRI-based" : "riskClass",
+      "en" : "riskClass"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Data proptery that shows the device class risk."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "116"
+  }, {
+    "range" : "12",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "117"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countryReported",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "countryReported",
+      "en" : "countryReported"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This property shows in wich country the incident was reported."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "118"
+  }, {
+    "range" : "12",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "119"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#outcome",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "101",
+    "label" : {
+      "IRI-based" : "outcome",
+      "en" : "outcome"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This data property shows the incident outcome."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "120"
+  }, {
+    "range" : "17",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "121"
+  }, {
+    "range" : "17",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "122"
+  }, {
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "123"
+  }, {
+    "range" : "12",
+    "domain" : "49",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "124"
+  }, {
+    "range" : "1",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "125"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#probability",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "94",
+    "label" : {
+      "IRI-based" : "probability",
+      "en" : "probability"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Data property that shows the probability of each risk."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "126"
+  }, {
+    "range" : "1",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "127"
+  }, {
+    "range" : "17",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "128"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isAffectedBy",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isAffectedBy",
+      "en" : "isAffectedBy"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "This property shows the risk that affect at device"
+    },
+    "attributes" : [ "object" ],
+    "id" : "93"
+  }, {
+    "range" : "17",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "129"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy",
+    "inverse" : "70",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "reportedBy",
+      "en" : "reportedBy"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This property shows which manufacturer reported the incident."
+    },
+    "attributes" : [ "object", "functional" ],
+    "id" : "130"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#status",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "status",
+      "undefined" : "status"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "This data property shows the action status."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "131"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#devicesAffected",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "devicesAffected",
+      "en" : "devicesAffected"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "This property shows the quantity of the devices wher the action must be implanted."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "132"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "106",
+    "label" : {
+      "IRI-based" : "isIvd",
+      "en" : "isIvd"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Data proptery that shows the device can be used for in vitro."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "133"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#authorizationNumber",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "135",
+    "label" : {
+      "IRI-based" : "authorizationNumber",
+      "en" : "authorizationNumber"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Data property thats shows the manufacturer authorization umber to operate."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "134"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#detectionDate",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "detectionDate",
+      "en" : "detectionDate"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This data property shows when the incident was detected."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "136"
+  }, {
+    "range" : "1",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "137"
+  }, {
+    "range" : "1",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "138"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#name",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "98",
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "name"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Data property thats shows the manufacturer name."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "139"
+  }, {
+    "range" : "1",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "140"
+  }, {
+    "range" : "1",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "141"
+  }, {
+    "range" : "1",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "142"
+  }, {
+    "range" : "1",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "143"
+  }, {
+    "range" : "1",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "144"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#country",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "country",
+      "en" : "country"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Data property thats shows the manufacturer country."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "145"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientSex",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "95",
+    "label" : {
+      "IRI-based" : "patientSex",
+      "en" : "patientSex"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This property shows the sex of the patient involved in the incident"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "146"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice",
+    "inverse" : "115",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasDevice",
+      "en" : "hasDevice"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This property links the device  and the incident."
+    },
+    "attributes" : [ "someValues", "object" ],
+    "id" : "147"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy",
+    "inverse" : "70",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "reportedBy",
+      "en" : "reportedBy"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This property shows which manufacturer reported the incident."
+    },
+    "attributes" : [ "someValues", "object", "functional" ],
+    "id" : "148"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk",
+    "inverse" : "75",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasRisk",
+      "en" : "hasRisk"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This property links an Incident to the Risk identified."
+    },
+    "attributes" : [ "someValues", "object" ],
+    "id" : "149"
+  }, {
+    "range" : "97",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "150"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceName",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "deviceName",
+      "en" : "deviceName"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Data proptery that shows the device name."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "151"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#affectsDeviceType",
+    "inverse" : "93",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "affectsDeviceType",
+      "en" : "affectsDeviceType"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "This property show us which device is affected by the risk."
+    },
+    "attributes" : [ "someValues", "object" ],
+    "id" : "152"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#competentAuthority",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "competentAuthority",
+      "en" : "competentAuthority"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Data property thats shows the competent authority that supervise the manufacturer."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "153"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskCategory",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "89",
+    "label" : {
+      "IRI-based" : "riskCategory",
+      "en" : "riskCategory"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Data property that showsa risks categorization."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "154"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy",
+    "inverse" : "53",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "isManufacturedBy",
+      "en" : "isManufacturedBy"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "A property created to recognize the manufacturer for each device."
+    },
+    "attributes" : [ "object", "functional" ],
+    "id" : "155"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "respondsToIncident",
+      "en" : "respondsToIncident"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "This property shows which the relation betwees the corrective action and the incident."
+    },
+    "attributes" : [ "someValues", "object" ],
+    "id" : "156"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy",
+    "inverse" : "53",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "isManufacturedBy",
+      "en" : "isManufacturedBy"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "A property created to recognize the manufacturer for each device."
+    },
+    "attributes" : [ "someValues", "object", "functional" ],
+    "id" : "157"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedIncidentRef",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "eudamedIncidentRef",
+      "en" : "eudamendIncidentRef"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This property shows the eudamed reference assigned to the incident."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "158"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "103",
+    "label" : {
+      "IRI-based" : "isImplantable",
+      "en" : "isImplantable"
+    },
+    "cardinality" : "1",
+    "domain" : "12",
+    "comment" : {
+      "en" : "Data proptery that shows the device is implantable."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "159"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "respondsToIncident",
+      "en" : "respondsToIncident"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "This property shows which the relation betwees the corrective action and the incident."
+    },
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRiskOf",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "isRiskOf",
+      "en" : "isRiskOf"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "This property links the Risk that affect an Incident"
+    },
+    "attributes" : [ "object" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturerId",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "99",
+    "label" : {
+      "IRI-based" : "manufacturerId",
+      "en" : "manufacturerId"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Data property thats shows the manufacturer id."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "160"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countriesAffected",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "countriesAffected",
+      "en" : "countriesAffected"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "This data property shows when the countries where the action was taken."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "161"
+  }, {
+    "iri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentDescription",
+    "baseIri" : "http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "incidentDescription",
+      "en" : "incidentDescription"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "This property shows the incident description."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "162"
+  }, {
+    "range" : "43",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "163"
+  }, {
+    "range" : "4",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "164"
+  }, {
+    "range" : "4",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "165"
+  }, {
+    "range" : "43",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "166"
+  }, {
+    "range" : "4",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "167"
+  } ]
+}

@@ -1,0 +1,978 @@
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices/1.0.0> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices> <http://purl.org/dc/elements/1.1/description> "dc:description\n\nThis is an ontology on the European catalog of medical devices of high risk and in vitro diagnostic devices. Based on the MDR Regulation (EU 2017/745) and the IVDR Regulation (EU 2017/746)"@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices> <http://purl.org/dc/elements/1.1/title> "An ontology about medical devices and their risks"@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices> <http://purl.org/dc/terms/created> "2026-04-26"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices> <http://purl.org/dc/terms/creator> "Miquel Alba Castelló" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices> <http://www.w3.org/2000/01/rdf-schema#label> "meddevice" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://data.europa.eu/eli/reg/2017/745/oj"@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://data.europa.eu/eli/reg/2017/746/oj"@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#terms:creator
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#terms:creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#license
+<http://www.w3.org/2000/01/rdf-schema#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#sameAs
+<http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#affectsDeviceType
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#affectsDeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#affectsDeviceType> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isAffectedBy> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#affectsDeviceType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#affectsDeviceType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#affectsDeviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "This property show us which device is affected by the risk."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#affectsDeviceType> <http://www.w3.org/2000/01/rdf-schema#label> "affectsDeviceType"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isDeviceOf> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links the device  and the incident."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice> <http://www.w3.org/2000/01/rdf-schema#label> "hasDevice"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#regulatesDevice> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RegulatoryFramework> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links the device  with the regulatory framework."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework> <http://www.w3.org/2000/01/rdf-schema#label> "hasRegulatoryFramework"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRiskOf> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links an Incident to the Risk identified."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk> <http://www.w3.org/2000/01/rdf-schema#label> "hasRisk"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isAffectedBy
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isAffectedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isAffectedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isAffectedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isAffectedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "This property shows the risk that affect at device"@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isAffectedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isAffectedBy"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isDeviceOf
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isDeviceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isDeviceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isDeviceOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isDeviceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links the incident and the device ."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isDeviceOf> <http://www.w3.org/2000/01/rdf-schema#label> "isDeviceOf"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturesDevice> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A property created to recognize the manufacturer for each device."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isManufacturedBy"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRespondedBy
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRespondedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRespondedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRespondedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRespondedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRespondedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "This property shows which the relation betwees the incident and the corrective action."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRespondedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isRespondedBy"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRiskOf
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRiskOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRiskOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRiskOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRiskOf> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links the Risk that affect an Incident"@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRiskOf> <http://www.w3.org/2000/01/rdf-schema#label> "isRiskOf"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturesDevice
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturesDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturesDevice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturesDevice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturesDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A property created to recognize the manufacturer of the device."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturesDevice> <http://www.w3.org/2000/01/rdf-schema#label> "manufacturesDevice"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#regulatesDevice
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#regulatesDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#regulatesDevice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RegulatoryFramework> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#regulatesDevice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#regulatesDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links the  the regulatory framework with the device."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#regulatesDevice> <http://www.w3.org/2000/01/rdf-schema#label> "regulatesDevice"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reports> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "This property shows which manufacturer reported the incident."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "reportedBy"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reports
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reports> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reports> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reports> <http://www.w3.org/2000/01/rdf-schema#comment> "This property shows which the incident of each manufacturer."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reports> <http://www.w3.org/2000/01/rdf-schema#label> "reports"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "This property shows which the relation betwees the corrective action and the incident."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident> <http://www.w3.org/2000/01/rdf-schema#label> "respondsToIncident"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDate
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDate> <http://www.w3.org/2000/01/rdf-schema#comment> "This data property shows when the action was taken."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDate> <http://www.w3.org/2000/01/rdf-schema#label> "actionDate"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDescription
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "This data property shows when the action description."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDescription> <http://www.w3.org/2000/01/rdf-schema#label> "actionDescription"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#authorizationNumber
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#authorizationNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#authorizationNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#authorizationNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#authorizationNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#authorizationNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Data property thats shows the manufacturer authorization umber to operate."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#authorizationNumber> <http://www.w3.org/2000/01/rdf-schema#label> "authorizationNumber"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#closureDate
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#closureDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#closureDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#closureDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#closureDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#closureDate> <http://www.w3.org/2000/01/rdf-schema#comment> "This data property shows when the action was closed."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#closureDate> <http://www.w3.org/2000/01/rdf-schema#label> "closureDate"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#competentAuthority
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#competentAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#competentAuthority> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#competentAuthority> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#competentAuthority> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#competentAuthority> <http://www.w3.org/2000/01/rdf-schema#comment> "Data property thats shows the competent authority that supervise the manufacturer."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#competentAuthority> <http://www.w3.org/2000/01/rdf-schema#label> "competentAuthority"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#contactEmail
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#contactEmail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#contactEmail> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#contactEmail> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#contactEmail> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#contactEmail> <http://www.w3.org/2000/01/rdf-schema#comment> "Data property thats shows the manufacturer email address."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#contactEmail> <http://www.w3.org/2000/01/rdf-schema#label> "contactEmail"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#correctiveActionTaken
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#correctiveActionTaken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#correctiveActionTaken> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#correctiveActionTaken> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#correctiveActionTaken> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#correctiveActionTaken> <http://www.w3.org/2000/01/rdf-schema#comment> "This property shows the corrective acction because of the incident."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#correctiveActionTaken> <http://www.w3.org/2000/01/rdf-schema#label> "correctiveActionTaken"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countriesAffected
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countriesAffected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countriesAffected> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countriesAffected> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countriesAffected> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countriesAffected> <http://www.w3.org/2000/01/rdf-schema#comment> "This data property shows when the countries where the action was taken."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countriesAffected> <http://www.w3.org/2000/01/rdf-schema#label> "countriesAffected"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#country
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#country> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#country> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#country> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#country> <http://www.w3.org/2000/01/rdf-schema#comment> "Data property thats shows the manufacturer country."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#country> <http://www.w3.org/2000/01/rdf-schema#label> "country"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countryReported
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countryReported> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countryReported> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countryReported> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countryReported> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countryReported> <http://www.w3.org/2000/01/rdf-schema#comment> "This property shows in wich country the incident was reported."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countryReported> <http://www.w3.org/2000/01/rdf-schema#label> "countryReported"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#description
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#description> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#description> <http://www.w3.org/2000/01/rdf-schema#comment> "Data property that shows the risk description."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#detectionDate
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#detectionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#detectionDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#detectionDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#detectionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#detectionDate> <http://www.w3.org/2000/01/rdf-schema#comment> "This data property shows when the incident was detected."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#detectionDate> <http://www.w3.org/2000/01/rdf-schema#label> "detectionDate"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceId
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceId> <http://www.w3.org/2000/01/rdf-schema#comment> "Data proptery that shows the device ID."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceId> <http://www.w3.org/2000/01/rdf-schema#label> "deviceId"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceName
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceName> <http://www.w3.org/2000/01/rdf-schema#comment> "Data proptery that shows the device name."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceName> <http://www.w3.org/2000/01/rdf-schema#label> "deviceName"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#devicesAffected
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#devicesAffected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#devicesAffected> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#devicesAffected> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#devicesAffected> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#devicesAffected> <http://www.w3.org/2000/01/rdf-schema#comment> "This property shows the quantity of the devices wher the action must be implanted."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#devicesAffected> <http://www.w3.org/2000/01/rdf-schema#label> "devicesAffected"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedFscaRef
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedFscaRef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedFscaRef> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedFscaRef> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedFscaRef> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedFscaRef> <http://www.w3.org/2000/01/rdf-schema#comment> "This data property shows when the eudamed FSCA related to the action."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedFscaRef> <http://www.w3.org/2000/01/rdf-schema#label> "eudamedFscaRef"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedIncidentRef
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedIncidentRef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedIncidentRef> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedIncidentRef> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedIncidentRef> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedIncidentRef> <http://www.w3.org/2000/01/rdf-schema#comment> "This property shows the eudamed reference assigned to the incident."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedIncidentRef> <http://www.w3.org/2000/01/rdf-schema#label> "eudamendIncidentRef"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedSrn
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedSrn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedSrn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedSrn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedSrn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedSrn> <http://www.w3.org/2000/01/rdf-schema#comment> "Data property thats shows the manufacturer eudamed number."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedSrn> <http://www.w3.org/2000/01/rdf-schema#label> "eudamedSrn"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eventDate
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eventDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eventDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eventDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eventDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eventDate> <http://www.w3.org/2000/01/rdf-schema#comment> "This data property shows when the incident was."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eventDate> <http://www.w3.org/2000/01/rdf-schema#label> "eventDate"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fscaId
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fscaId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fscaId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fscaId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fscaId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fscaId> <http://www.w3.org/2000/01/rdf-schema#comment> "this data type shows the FCSA id."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fscaId> <http://www.w3.org/2000/01/rdf-schema#label> "fcsaId"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#imdrfCode
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#imdrfCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#imdrfCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#imdrfCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#imdrfCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#imdrfCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Data property that shows the imdrf code linked  to the risk."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#imdrfCode> <http://www.w3.org/2000/01/rdf-schema#label> "imdrfCode"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentDescription
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "This property shows the incident description."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentDescription> <http://www.w3.org/2000/01/rdf-schema#label> "incidentDescription"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentId
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentId> <http://www.w3.org/2000/01/rdf-schema#comment> "This data property shows the incident id."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentId> <http://www.w3.org/2000/01/rdf-schema#label> "incidentId"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#intendedPurpose
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#intendedPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "Data proptery that shows the device intended purpose."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "intendedPurpose"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive> <http://www.w3.org/2000/01/rdf-schema#comment> "Data proptery that shows the device needs energy to operate."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive> <http://www.w3.org/2000/01/rdf-schema#label> "isActive"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable> <http://www.w3.org/2000/01/rdf-schema#comment> "Data proptery that shows the device is implantable."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable> <http://www.w3.org/2000/01/rdf-schema#label> "isImplantable"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd> <http://www.w3.org/2000/01/rdf-schema#comment> "Data proptery that shows the device can be used for in vitro."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd> <http://www.w3.org/2000/01/rdf-schema#label> "isIvd"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable> <http://www.w3.org/2000/01/rdf-schema#comment> "Data proptery that shows the device is reusable."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable> <http://www.w3.org/2000/01/rdf-schema#label> "isReusable"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturerId
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturerId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturerId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturerId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturerId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturerId> <http://www.w3.org/2000/01/rdf-schema#comment> "Data property thats shows the manufacturer id."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturerId> <http://www.w3.org/2000/01/rdf-schema#label> "manufacturerId"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#name
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#name> <http://www.w3.org/2000/01/rdf-schema#comment> "Data property thats shows the manufacturer name."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#outcome
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#outcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#outcome> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#outcome> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#outcome> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#outcome> <http://www.w3.org/2000/01/rdf-schema#comment> "This data property shows the incident outcome."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#outcome> <http://www.w3.org/2000/01/rdf-schema#label> "outcome"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientAge
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientAge> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientAge> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientAge> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientAge> <http://www.w3.org/2000/01/rdf-schema#comment> "This property shows the age of the patient involved in the incident"@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientAge> <http://www.w3.org/2000/01/rdf-schema#label> "patientAge"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientSex
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientSex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientSex> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientSex> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientSex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientSex> <http://www.w3.org/2000/01/rdf-schema#comment> "This property shows the sex of the patient involved in the incident"@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientSex> <http://www.w3.org/2000/01/rdf-schema#label> "patientSex"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#probability
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#probability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#probability> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#probability> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#probability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#probability> <http://www.w3.org/2000/01/rdf-schema#comment> "Data property that shows the probability of each risk."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#probability> <http://www.w3.org/2000/01/rdf-schema#label> "probability"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportDate
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportDate> <http://www.w3.org/2000/01/rdf-schema#comment> "This data property shows when the incident was reported."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportDate> <http://www.w3.org/2000/01/rdf-schema#label> "reportDate"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskCategory
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskCategory> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Data property that showsa risks categorization."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskCategory> <http://www.w3.org/2000/01/rdf-schema#label> "riskCategory"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskClass
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskClass> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Data proptery that shows the device class risk."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskClass> <http://www.w3.org/2000/01/rdf-schema#label> "riskClass"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskId
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskId> <http://www.w3.org/2000/01/rdf-schema#comment> "Data property that shows the identification number."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskId> <http://www.w3.org/2000/01/rdf-schema#label> "riskId" .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskName
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskName> <http://www.w3.org/2000/01/rdf-schema#comment> "Data property that shows the risk name.."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskName> <http://www.w3.org/2000/01/rdf-schema#label> "riskName"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#scope
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#scope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#scope> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#scope> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#scope> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#scope> <http://www.w3.org/2000/01/rdf-schema#comment> "This data property shows the action scope."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#scope> <http://www.w3.org/2000/01/rdf-schema#label> "scope"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#severity
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#severity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#severity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#severity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#severity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#severity> <http://www.w3.org/2000/01/rdf-schema#comment> "Data property that shows the risk severity."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#severity> <http://www.w3.org/2000/01/rdf-schema#label> "severity"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#status
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#status> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#status> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#status> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#status> <http://www.w3.org/2000/01/rdf-schema#comment> "This data property shows the action status."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#status> <http://www.w3.org/2000/01/rdf-schema#label> "status" .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#udiDi
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#udiDi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#udiDi> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#udiDi> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#udiDi> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#udiDi> <http://www.w3.org/2000/01/rdf-schema#comment> "Data proptery that shows the device UDI, string because ()."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#udiDi> <http://www.w3.org/2000/01/rdf-schema#label> "udiDi"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveDevice
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A device that needs energy."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#label> "ActiveDevice"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveImplant
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveImplant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveImplant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveImplant> <http://www.w3.org/2000/01/rdf-schema#comment> "A device that can be implanted."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveImplant> <http://www.w3.org/2000/01/rdf-schema#label> "ActiveImplant"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ContaminationRisk
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ContaminationRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ContaminationRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ContaminationRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "An incident that has a Pollution Risk."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ContaminationRisk> <http://www.w3.org/2000/01/rdf-schema#label> "ContaminationRisk"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#comment> "A class with field safety corrective actions (FSCA) linked to incidents."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#label> "CorrectiveAction"@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> <http://www.w3.org/2004/02/skos/core#prefLabel> "Corrective Action"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CybersecurityRisk
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CybersecurityRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CybersecurityRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CybersecurityRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "An incident that has CyberSecurityRisk"@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CybersecurityRisk> <http://www.w3.org/2000/01/rdf-schema#label> "CyberSecurityRisk"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid3 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "A class that includes a catalog of devices with their risk class, manufacturer and type."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device"@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> <http://www.w3.org/2000/01/rdf-schema#sameAs> "http://publications.europa.eu/resource/authority/class-sum-leg/2403020204"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> <http://www.w3.org/2004/02/skos/core#prefLabel> "Medical Device"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#DiagnosticRisk
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#DiagnosticRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#DiagnosticRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#DiagnosticRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "An incident that has a diagnostic risk."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#DiagnosticRisk> <http://www.w3.org/2000/01/rdf-schema#label> "DiagnosticRisk"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableActiveDevice
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableActiveDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableActiveDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableActiveDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A device that needs energy and that is implantable."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableActiveDevice> <http://www.w3.org/2000/01/rdf-schema#label> "ImplantableActiveDevice"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableDevice
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "An implantable device."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#label> "ImplantableDevice"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InSituCorrection
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InSituCorrection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InSituCorrection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InSituCorrection> <http://www.w3.org/2000/01/rdf-schema#comment> "Any corrective action with a correction made on place"@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InSituCorrection> <http://www.w3.org/2000/01/rdf-schema#label> "InSituCorrection"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InVitroDiagnosticDevice
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InVitroDiagnosticDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A device that can be used to in vitro diagnostic."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#label> "InVitroDiagnosticDevice"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> <http://www.w3.org/2000/01/rdf-schema#comment> "A class that collects reported incidents associated with specific devices."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> <http://www.w3.org/2000/01/rdf-schema#label> "Incident"@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> <http://www.w3.org/2004/02/skos/core#prefLabel> "Safety Incident"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InfectionRisk
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InfectionRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InfectionRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InfectionRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "An incident that has a risk of infection."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InfectionRisk> <http://www.w3.org/2000/01/rdf-schema#label> "InfectionRisk"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InjuryRisk
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InjuryRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InjuryRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InjuryRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "An incident that carries a risk of injury."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InjuryRisk> <http://www.w3.org/2000/01/rdf-schema#label> "InjuryRisk"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InterferenceRisk
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InterferenceRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InterferenceRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InterferenceRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "An incident that poses a risk of interference."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InterferenceRisk> <http://www.w3.org/2000/01/rdf-schema#label> "InterferenceRisk"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MalfunctionRisk
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MalfunctionRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MalfunctionRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MalfunctionRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "An incident that poses a risk of malfunction."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MalfunctionRisk> <http://www.w3.org/2000/01/rdf-schema#label> "MalfunctionRisk"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "A class that contains the data of European manufacturers of medical devices (name, country, authorization number)."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturer"@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#sameAs> "http://publications.europa.eu/resource/authority/role/AUTHORI"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> <http://www.w3.org/2004/02/skos/core#prefLabel> "Authorising Entity"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MaterialRisk
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MaterialRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MaterialRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MaterialRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "An incident that represents a material risk."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MaterialRisk> <http://www.w3.org/2000/01/rdf-schema#label> "MaterialRisk"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "The pattern that describes the set of classes of the Ontology."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#label> "MedicalDevice"@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://publications.europa.eu/resource/authority/class-sum-leg/2403020204"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Medical Device"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#NearMissIncident
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#NearMissIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#NearMissIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#NearMissIncident> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SeriousIncident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#NearMissIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "Incident almost gone."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#NearMissIncident> <http://www.w3.org/2000/01/rdf-schema#label> "NearMissIncident"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RadiationRisk
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RadiationRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RadiationRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RadiationRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "An incident that represents a radiation risk."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RadiationRisk> <http://www.w3.org/2000/01/rdf-schema#label> "RadiationRisk"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Recall
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Recall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Recall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Recall> <http://www.w3.org/2000/01/rdf-schema#comment> "Any corrective action that needs a recall."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Recall> <http://www.w3.org/2000/01/rdf-schema#label> "Recall"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RegulatoryFramework
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RegulatoryFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RegulatoryFramework> <http://www.w3.org/2000/01/rdf-schema#comment> "The regulatory framework for device."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RegulatoryFramework> <http://www.w3.org/2000/01/rdf-schema#label> "RegulatoryFramework"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#affectsDeviceType> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> <http://www.w3.org/2000/01/rdf-schema#comment> "A class that contains a catalog of risks identified according to the IMDRF nomenclature."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> <http://www.w3.org/2000/01/rdf-schema#label> "Risk"@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> <http://www.w3.org/2000/01/rdf-schema#sameAs> "http://dbpedia.org/resource/Risk"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> <http://www.w3.org/2004/02/skos/core#prefLabel> "Risk"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SafetyAlert
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SafetyAlert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SafetyAlert> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SafetyAlert> <http://www.w3.org/2000/01/rdf-schema#comment> "Any corrective action that involves a health alert."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SafetyAlert> <http://www.w3.org/2000/01/rdf-schema#label> "SafetyAlert"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SelfTestDevice
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SelfTestDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SelfTestDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SelfTestDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A self test device."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SelfTestDevice> <http://www.w3.org/2000/01/rdf-schema#label> "SelfTestDevice"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SeriousIncident
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SeriousIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "Serious incident."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#label> "SeriousIncident"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SingleUseDevice
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SingleUseDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SingleUseDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SingleUseDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A device for a single use."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SingleUseDevice> <http://www.w3.org/2000/01/rdf-schema#label> "SingeUseDevice"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SoftwareRisk
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SoftwareRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SoftwareRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SoftwareRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "An incident that represents a software risk."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SoftwareRisk> <http://www.w3.org/2000/01/rdf-schema#label> "SoftwareRisk"@en .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#UserNotice
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#UserNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#UserNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#UserNotice> <http://www.w3.org/2000/01/rdf-schema#comment> "A corrective action noticed by user."@en .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#UserNotice> <http://www.w3.org/2000/01/rdf-schema#label> "UserNotice"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableActiveDevice> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#mdr> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceName> "HeartMate 3 LVAD" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#intendedPurpose> "Ventricular assist device for end-stage heart failure" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskClass> "ClassIII" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#udiDi> "(01)00380740009095" .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InVitroDiagnosticDevice> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man005> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceName> "cobas e 801 Immunoassay Analyzer" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#intendedPurpose> "Automated immunoassay analyzer for clinical laboratory" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskClass> "ClassC" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#udiDi> "(01)04015630001016" .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fsca001
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fsca001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fsca001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fsca001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fsca001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDate> "2024-02-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fsca001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#devicesAffected> "850"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fsca001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedFscaRef> "EU-FSCA-2024-000001" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fsca001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#scope> "All HeartMate 3 LVAD units implanted since 2020" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fsca001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#status> "open" .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SeriousIncident> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#correctiveActionTaken> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countryReported> "Germany" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#detectionDate> "2024-01-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedIncidentRef> "EU-INC-2024-000001" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eventDate> "2024-01-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentDescription> "Patient implanted with HeartMate 3 LVAD developed ischemic stroke 6 months post-implant. Device thrombus confirmed by echocardiography." .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#outcome> "Serious patient injury - embolic stroke" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientAge> "58"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientSex> "Male" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportDate> "2024-01-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ivdr
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ivdr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ivdr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RegulatoryFramework> .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#authorizationNumber> "IE/2017/001234" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#competentAuthority> "Health Products Regulatory Authority (HPRA)" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#contactEmail> "regulatory@medtronic.com"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#country> "Ireland" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedSrn> "SRN-IE-MED-0001" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#name> "Medtronic plc" .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man005
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man005> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#authorizationNumber> "DE/2017/007890" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man005> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#competentAuthority> "Bundesinstitut fÃ¼r Arzneimittel und Medizinprodukte (BfArM" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man005> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#contactEmail> "regulatory@roche.com"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man005> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#country> "Germany" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man005> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedSrn> "SRN-DE-MED-0005" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man005> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#name> "Roche Diagnostics GmbH" .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#mdr
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#mdr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#mdr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RegulatoryFramework> .
+# 
+# http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableActiveDevice> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InjuryRisk> .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#imdrfCode> "A0201" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#probability> "Low" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskCategory> "Patient Harm" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskName> "Thrombosis - device-related" .
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#severity> "Critical" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#meddevices:f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#meddevices:i> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid11 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid11 <http://www.w3.org/2000/01/rdf-schema#comment> "IVDR" .
+_:genid11 <http://www.w3.org/2000/01/rdf-schema#label> "S4" .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid11 <http://www.w3.org/2003/11/swrl#body> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
+_:genid13 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#d> .
+_:genid13 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#d> .
+_:genid15 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InVitroDiagnosticDevice> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid11 <http://www.w3.org/2003/11/swrl#head> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
+_:genid17 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ivdr> .
+_:genid17 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#d> .
+_:genid17 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid18 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid18 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid18 <http://www.w3.org/2000/01/rdf-schema#label> "S3" .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid18 <http://www.w3.org/2003/11/swrl#body> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
+_:genid20 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#meddevices:i> .
+_:genid20 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SeriousIncident> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#meddevices:i> .
+_:genid22 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#meddevices:f> .
+_:genid22 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#meddevices:f> .
+_:genid24 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid18 <http://www.w3.org/2003/11/swrl#head> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
+_:genid26 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#meddevices:f> .
+_:genid26 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SafetyAlert> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid27 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid27 <http://www.w3.org/2000/01/rdf-schema#comment> "SelfTestDevice" .
+_:genid27 <http://www.w3.org/2000/01/rdf-schema#label> "S2" .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid27 <http://www.w3.org/2003/11/swrl#body> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
+_:genid29 <http://www.w3.org/2003/11/swrl#argument2> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid29 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#d> .
+_:genid29 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
+_:genid31 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#d> .
+_:genid31 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
+_:genid33 <http://www.w3.org/2003/11/swrl#argument2> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid33 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#d> .
+_:genid33 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid27 <http://www.w3.org/2003/11/swrl#head> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid35 .
+_:genid35 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#d> .
+_:genid35 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SelfTestDevice> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

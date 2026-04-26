@@ -1,0 +1,3409 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>An ontology about medical devices and their risks</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices","name":"An ontology about medical devices and their risks", "headline":"Document describing the ontology http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices", "dateReleased":"2026-04-26", "version":"1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Miquel Alba Castelló"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>An ontology about medical devices and their risks</h1>
+<h2>Release: 2026-04-26</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices/1.0.0">http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices/1.0.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices">http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices</a></dd>
+<dt>Revision:</dt>
+<dd>1.0.0</dd>
+<dt>Authors:</dt>
+<dd>Miquel Alba Castelló</dd>
+
+<dt>See also:</dt>
+<dd><a href="http://data.europa.eu/eli/reg/2017/745/oj">http://data.europa.eu/eli/reg/2017/745/oj</a></dd><dd><a href="http://data.europa.eu/eli/reg/2017/746/oj">http://data.europa.eu/eli/reg/2017/746/oj</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Miquel Alba Castelló. An ontology about medical devices and their risks. Revision: 1.0.0. Retrieved from: http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices/1.0.0</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>[Ontology NS Prefix]</b></td><td>&lt;http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices&gt;</td></tr>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>meddevices</b></td><td>&lt;http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
+<tr><td><b>swrl</b></td><td>&lt;http://www.w3.org/2003/11/swrl#&gt;</td></tr>
+<tr><td><b>swrla</b></td><td>&lt;http://swrl.stanford.edu/ontologies/3.3/swrla.owl#&gt;</td></tr>
+<tr><td><b>swrlb</b></td><td>&lt;http://www.w3.org/2003/11/swrlb#&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#terms:&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">meddevice: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#ActiveDevice"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveDevice">ActiveDevice</a>
+   </li>
+   <li>
+      <a href="#ActiveImplant"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveImplant">ActiveImplant</a>
+   </li>
+   <li>
+      <a href="#ContaminationRisk"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ContaminationRisk">ContaminationRisk</a>
+   </li>
+   <li>
+      <a href="#CorrectiveAction"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a>
+   </li>
+   <li>
+      <a href="#CybersecurityRisk"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CybersecurityRisk">CyberSecurityRisk</a>
+   </li>
+   <li>
+      <a href="#Device"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a>
+   </li>
+   <li>
+      <a href="#DiagnosticRisk"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#DiagnosticRisk">DiagnosticRisk</a>
+   </li>
+   <li>
+      <a href="#ImplantableActiveDevice"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableActiveDevice">ImplantableActiveDevice</a>
+   </li>
+   <li>
+      <a href="#ImplantableDevice"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableDevice">ImplantableDevice</a>
+   </li>
+   <li>
+      <a href="#Incident"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a>
+   </li>
+   <li>
+      <a href="#InfectionRisk"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InfectionRisk">InfectionRisk</a>
+   </li>
+   <li>
+      <a href="#InjuryRisk"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InjuryRisk">InjuryRisk</a>
+   </li>
+   <li>
+      <a href="#InSituCorrection"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InSituCorrection">InSituCorrection</a>
+   </li>
+   <li>
+      <a href="#InterferenceRisk"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InterferenceRisk">InterferenceRisk</a>
+   </li>
+   <li>
+      <a href="#InVitroDiagnosticDevice"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InVitroDiagnosticDevice">InVitroDiagnosticDevice</a>
+   </li>
+   <li>
+      <a href="#MalfunctionRisk"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MalfunctionRisk">MalfunctionRisk</a>
+   </li>
+   <li>
+      <a href="#Manufacturer"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer">Manufacturer</a>
+   </li>
+   <li>
+      <a href="#MaterialRisk"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MaterialRisk">MaterialRisk</a>
+   </li>
+   <li>
+      <a href="#MedicalDevice"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice">MedicalDevice</a>
+   </li>
+   <li>
+      <a href="#NearMissIncident"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#NearMissIncident">NearMissIncident</a>
+   </li>
+   <li>
+      <a href="#RadiationRisk"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RadiationRisk">RadiationRisk</a>
+   </li>
+   <li>
+      <a href="#Recall"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Recall">Recall</a>
+   </li>
+   <li>
+      <a href="#RegulatoryFramework"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RegulatoryFramework">RegulatoryFramework</a>
+   </li>
+   <li>
+      <a href="#Risk"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a>
+   </li>
+   <li>
+      <a href="#SafetyAlert"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SafetyAlert">SafetyAlert</a>
+   </li>
+   <li>
+      <a href="#SelfTestDevice"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SelfTestDevice">SelfTestDevice</a>
+   </li>
+   <li>
+      <a href="#SeriousIncident"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SeriousIncident">SeriousIncident</a>
+   </li>
+   <li>
+      <a href="#SingleUseDevice"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SingleUseDevice">SingeUseDevice</a>
+   </li>
+   <li>
+      <a href="#SoftwareRisk"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SoftwareRisk">SoftwareRisk</a>
+   </li>
+   <li>
+      <a href="#UserNotice"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#UserNotice">UserNotice</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#affectsDeviceType"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#affectsDeviceType">affectsDeviceType</a>
+   </li>
+   <li>
+      <a href="#hasDevice"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice">hasDevice</a>
+   </li>
+   <li>
+      <a href="#hasRegulatoryFramework"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework">hasRegulatoryFramework</a>
+   </li>
+   <li>
+      <a href="#hasRisk"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk">hasRisk</a>
+   </li>
+   <li>
+      <a href="#isAffectedBy"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isAffectedBy">isAffectedBy</a>
+   </li>
+   <li>
+      <a href="#isDeviceOf"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isDeviceOf">isDeviceOf</a>
+   </li>
+   <li>
+      <a href="#isManufacturedBy"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy">isManufacturedBy</a>
+   </li>
+   <li>
+      <a href="#isRespondedBy"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRespondedBy">isRespondedBy</a>
+   </li>
+   <li>
+      <a href="#isRiskOf"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRiskOf">isRiskOf</a>
+   </li>
+   <li>
+      <a href="#manufacturesDevice"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturesDevice">manufacturesDevice</a>
+   </li>
+   <li>
+      <a href="#regulatesDevice"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#regulatesDevice">regulatesDevice</a>
+   </li>
+   <li>
+      <a href="#reportedBy"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy">reportedBy</a>
+   </li>
+   <li>
+      <a href="#reports"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reports">reports</a>
+   </li>
+   <li>
+      <a href="#respondsToIncident"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident">respondsToIncident</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#actionDate"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDate">actionDate</a>
+   </li>
+   <li>
+      <a href="#actionDescription"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDescription">actionDescription</a>
+   </li>
+   <li>
+      <a href="#authorizationNumber"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#authorizationNumber">authorizationNumber</a>
+   </li>
+   <li>
+      <a href="#closureDate"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#closureDate">closureDate</a>
+   </li>
+   <li>
+      <a href="#competentAuthority"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#competentAuthority">competentAuthority</a>
+   </li>
+   <li>
+      <a href="#contactEmail"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#contactEmail">contactEmail</a>
+   </li>
+   <li>
+      <a href="#correctiveActionTaken"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#correctiveActionTaken">correctiveActionTaken</a>
+   </li>
+   <li>
+      <a href="#countriesAffected"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countriesAffected">countriesAffected</a>
+   </li>
+   <li>
+      <a href="#country"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#country">country</a>
+   </li>
+   <li>
+      <a href="#countryReported"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countryReported">countryReported</a>
+   </li>
+   <li>
+      <a href="#description"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#description">description</a>
+   </li>
+   <li>
+      <a href="#detectionDate"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#detectionDate">detectionDate</a>
+   </li>
+   <li>
+      <a href="#deviceId"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceId">deviceId</a>
+   </li>
+   <li>
+      <a href="#deviceName"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceName">deviceName</a>
+   </li>
+   <li>
+      <a href="#devicesAffected"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#devicesAffected">devicesAffected</a>
+   </li>
+   <li>
+      <a href="#eudamedFscaRef"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedFscaRef">eudamedFscaRef</a>
+   </li>
+   <li>
+      <a href="#eudamedSrn"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedSrn">eudamedSrn</a>
+   </li>
+   <li>
+      <a href="#eudamedIncidentRef"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedIncidentRef">eudamendIncidentRef</a>
+   </li>
+   <li>
+      <a href="#eventDate"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eventDate">eventDate</a>
+   </li>
+   <li>
+      <a href="#fscaId"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fscaId">fcsaId</a>
+   </li>
+   <li>
+      <a href="#imdrfCode"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#imdrfCode">imdrfCode</a>
+   </li>
+   <li>
+      <a href="#incidentDescription"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentDescription">incidentDescription</a>
+   </li>
+   <li>
+      <a href="#incidentId"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentId">incidentId</a>
+   </li>
+   <li>
+      <a href="#intendedPurpose"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#intendedPurpose">intendedPurpose</a>
+   </li>
+   <li>
+      <a href="#isActive"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive">isActive</a>
+   </li>
+   <li>
+      <a href="#isImplantable"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable">isImplantable</a>
+   </li>
+   <li>
+      <a href="#isIvd"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd">isIvd</a>
+   </li>
+   <li>
+      <a href="#isReusable"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable">isReusable</a>
+   </li>
+   <li>
+      <a href="#manufacturerId"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturerId">manufacturerId</a>
+   </li>
+   <li>
+      <a href="#name"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#name">name</a>
+   </li>
+   <li>
+      <a href="#outcome"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#outcome">outcome</a>
+   </li>
+   <li>
+      <a href="#patientAge"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientAge">patientAge</a>
+   </li>
+   <li>
+      <a href="#patientSex"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientSex">patientSex</a>
+   </li>
+   <li>
+      <a href="#probability"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#probability">probability</a>
+   </li>
+   <li>
+      <a href="#reportDate"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportDate">reportDate</a>
+   </li>
+   <li>
+      <a href="#riskCategory"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskCategory">riskCategory</a>
+   </li>
+   <li>
+      <a href="#riskClass"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskClass">riskClass</a>
+   </li>
+   <li>
+      <a href="#riskId"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskId">riskId</a>
+   </li>
+   <li>
+      <a href="#riskName"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskName">riskName</a>
+   </li>
+   <li>
+      <a href="#scope"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#scope">scope</a>
+   </li>
+   <li>
+      <a href="#severity"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#severity">severity</a>
+   </li>
+   <li>
+      <a href="#status"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#status">status</a>
+   </li>
+   <li>
+      <a href="#udiDi"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#udiDi">udiDi</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+         title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+         <span>is Rule Enabled</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2000/01/rdf-schema#license" title="http://www.w3.org/2000/01/rdf-schema#license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#prefLabel" title="http://www.w3.org/2004/02/skos/core#prefLabel">
+         <span>pref Label</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2000/01/rdf-schema#sameAs" title="http://www.w3.org/2000/01/rdf-schema#sameAs">
+         <span>same As</span>
+      </a>
+   </li>
+   <li>
+      <a href="#terms:creator"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#terms:creator">
+         <span>terms:creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#dev001"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001">
+         <span>dev001</span>
+      </a>
+   </li>
+   <li>
+      <a href="#dev016"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016">
+         <span>dev016</span>
+      </a>
+   </li>
+   <li>
+      <a href="#fsca001"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fsca001">
+         <span>fsca001</span>
+      </a>
+   </li>
+   <li>
+      <a href="#inc001"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001">
+         <span>inc001</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ivdr"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ivdr">
+         <span>ivdr</span>
+      </a>
+   </li>
+   <li>
+      <a href="#man001"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001">
+         <span>man001</span>
+      </a>
+   </li>
+   <li>
+      <a href="#man005"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man005">
+         <span>man005</span>
+      </a>
+   </li>
+   <li>
+      <a href="#mdr"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#mdr">
+         <span>mdr</span>
+      </a>
+   </li>
+   <li>
+      <a href="#rsk003"
+         title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003">
+         <span>rsk003</span>
+      </a>
+   </li>
+</ul><h4> SWRL Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#d4e2062">S2</a>
+   </li>
+   <li>
+      <a href="#d4e1962">S3</a>
+   </li>
+   <li>
+      <a href="#d4e1880">S4</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">meddevice: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">dc:description
+
+This is an ontology on the European catalog of medical devices of high risk and in vitro diagnostic devices. Based on the MDR Regulation (EU 2017/745) and the IVDR Regulation (EU 2017/746)</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for meddevice classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by meddevice.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#ActiveDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveDevice">ActiveDevice</a></li>
+  <li><a href="#ActiveImplant" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveImplant">ActiveImplant</a></li>
+  <li><a href="#ContaminationRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ContaminationRisk">ContaminationRisk</a></li>
+  <li><a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a></li>
+  <li><a href="#CybersecurityRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CybersecurityRisk">CyberSecurityRisk</a></li>
+  <li><a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a></li>
+  <li><a href="#DiagnosticRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#DiagnosticRisk">DiagnosticRisk</a></li>
+  <li><a href="#ImplantableActiveDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableActiveDevice">ImplantableActiveDevice</a></li>
+  <li><a href="#ImplantableDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableDevice">ImplantableDevice</a></li>
+  <li><a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a></li>
+  <li><a href="#InfectionRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InfectionRisk">InfectionRisk</a></li>
+  <li><a href="#InjuryRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InjuryRisk">InjuryRisk</a></li>
+  <li><a href="#InSituCorrection" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InSituCorrection">InSituCorrection</a></li>
+  <li><a href="#InterferenceRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InterferenceRisk">InterferenceRisk</a></li>
+  <li><a href="#InVitroDiagnosticDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InVitroDiagnosticDevice">InVitroDiagnosticDevice</a></li>
+  <li><a href="#MalfunctionRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MalfunctionRisk">MalfunctionRisk</a></li>
+  <li><a href="#Manufacturer" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer">Manufacturer</a></li>
+  <li><a href="#MaterialRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MaterialRisk">MaterialRisk</a></li>
+  <li><a href="#MedicalDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice">MedicalDevice</a></li>
+  <li><a href="#NearMissIncident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#NearMissIncident">NearMissIncident</a></li>
+  <li><a href="#RadiationRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RadiationRisk">RadiationRisk</a></li>
+  <li><a href="#Recall" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Recall">Recall</a></li>
+  <li><a href="#RegulatoryFramework" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RegulatoryFramework">RegulatoryFramework</a></li>
+  <li><a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a></li>
+  <li><a href="#SafetyAlert" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SafetyAlert">SafetyAlert</a></li>
+  <li><a href="#SelfTestDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SelfTestDevice">SelfTestDevice</a></li>
+  <li><a href="#SeriousIncident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SeriousIncident">SeriousIncident</a></li>
+  <li><a href="#SingleUseDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SingleUseDevice">SingeUseDevice</a></li>
+  <li><a href="#SoftwareRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SoftwareRisk">SoftwareRisk</a></li>
+  <li><a href="#UserNotice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#UserNotice">UserNotice</a></li>
+ </ul>
+ <div class="entity" id="ActiveDevice">
+  <h3>ActiveDevice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveDevice</p>
+  <div class="comment">
+   <span class="markdown">A device that needs energy.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ActiveImplant">
+  <h3>ActiveImplant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveImplant</p>
+  <div class="comment">
+   <span class="markdown">A device that can be implanted.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ContaminationRisk">
+  <h3>ContaminationRisk<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ContaminationRisk</p>
+  <div class="comment">
+   <span class="markdown">An incident that has a Pollution Risk.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CorrectiveAction">
+  <h3>CorrectiveAction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction</p>
+  <div class="comment">
+   <span class="markdown">A class with field safety corrective actions (FSCA) linked to incidents.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MedicalDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice">MedicalDevice</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#InSituCorrection" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InSituCorrection">InSituCorrection</a> <sup class="type-c" title="class">c</sup>, <a href="#Recall" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Recall">Recall</a> <sup class="type-c" title="class">c</sup>, <a href="#SafetyAlert" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SafetyAlert">SafetyAlert</a> <sup class="type-c" title="class">c</sup>, <a href="#UserNotice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#UserNotice">UserNotice</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#actionDate" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDate">actionDate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#actionDescription" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDescription">actionDescription</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#closureDate" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#closureDate">closureDate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#countriesAffected" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countriesAffected">countriesAffected</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#devicesAffected" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#devicesAffected">devicesAffected</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#eudamedFscaRef" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedFscaRef">eudamedFscaRef</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#fscaId" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fscaId">fcsaId</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#respondsToIncident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident">respondsToIncident</a> <sup class="type-op" title="object property">op</sup>, <a href="#scope" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#scope">scope</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#status" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#status">status</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#isRespondedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRespondedBy">isRespondedBy</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#fsca001" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fsca001">fsca001</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CybersecurityRisk">
+  <h3>CyberSecurityRisk<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CybersecurityRisk</p>
+  <div class="comment">
+   <span class="markdown">An incident that has CyberSecurityRisk</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Device">
+  <h3>Device<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device</p>
+  <div class="comment">
+   <span class="markdown">A class that includes a catalog of devices with their risk class, manufacturer and type.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MedicalDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice">MedicalDevice</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ActiveDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveDevice">ActiveDevice</a> <sup class="type-c" title="class">c</sup>, <a href="#ActiveImplant" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ActiveImplant">ActiveImplant</a> <sup class="type-c" title="class">c</sup>, <a href="#ImplantableActiveDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableActiveDevice">ImplantableActiveDevice</a> <sup class="type-c" title="class">c</sup>, <a href="#ImplantableDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableDevice">ImplantableDevice</a> <sup class="type-c" title="class">c</sup>, <a href="#InVitroDiagnosticDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InVitroDiagnosticDevice">InVitroDiagnosticDevice</a> <sup class="type-c" title="class">c</sup>, <a href="#SelfTestDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SelfTestDevice">SelfTestDevice</a> <sup class="type-c" title="class">c</sup>, <a href="#SingleUseDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SingleUseDevice">SingeUseDevice</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#deviceId" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceId">deviceId</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#deviceName" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceName">deviceName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#intendedPurpose" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#intendedPurpose">intendedPurpose</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isActive" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive">isActive</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isAffectedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isAffectedBy">isAffectedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#isDeviceOf" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isDeviceOf">isDeviceOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#isImplantable" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable">isImplantable</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isIvd" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd">isIvd</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isManufacturedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy">isManufacturedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#isReusable" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable">isReusable</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#riskClass" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskClass">riskClass</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#udiDi" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#udiDi">udiDi</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#affectsDeviceType" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#affectsDeviceType">affectsDeviceType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice">hasDevice</a> <sup class="type-op" title="object property">op</sup>, <a href="#manufacturesDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturesDevice">manufacturesDevice</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DiagnosticRisk">
+  <h3>DiagnosticRisk<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#DiagnosticRisk</p>
+  <div class="comment">
+   <span class="markdown">An incident that has a diagnostic risk.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ImplantableActiveDevice">
+  <h3>ImplantableActiveDevice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableActiveDevice</p>
+  <div class="comment">
+   <span class="markdown">A device that needs energy and that is implantable.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#dev001" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001">dev001</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#rsk003" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003">rsk003</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ImplantableDevice">
+  <h3>ImplantableDevice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableDevice</p>
+  <div class="comment">
+   <span class="markdown">An implantable device.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Incident">
+  <h3>Incident<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident</p>
+  <div class="comment">
+   <span class="markdown">A class that collects reported incidents associated with specific devices.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MedicalDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice">MedicalDevice</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#NearMissIncident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#NearMissIncident">NearMissIncident</a> <sup class="type-c" title="class">c</sup>, <a href="#SeriousIncident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SeriousIncident">SeriousIncident</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#correctiveActionTaken" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#correctiveActionTaken">correctiveActionTaken</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#countryReported" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countryReported">countryReported</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#detectionDate" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#detectionDate">detectionDate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#eudamedIncidentRef" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedIncidentRef">eudamendIncidentRef</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#eventDate" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eventDate">eventDate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice">hasDevice</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk">hasRisk</a> <sup class="type-op" title="object property">op</sup>, <a href="#incidentDescription" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentDescription">incidentDescription</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#incidentId" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentId">incidentId</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isRespondedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRespondedBy">isRespondedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#outcome" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#outcome">outcome</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#patientAge" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientAge">patientAge</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#patientSex" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientSex">patientSex</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#reportDate" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportDate">reportDate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#reportedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy">reportedBy</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#isDeviceOf" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isDeviceOf">isDeviceOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#isRiskOf" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRiskOf">isRiskOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#reports" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reports">reports</a> <sup class="type-op" title="object property">op</sup>, <a href="#respondsToIncident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident">respondsToIncident</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InfectionRisk">
+  <h3>InfectionRisk<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InfectionRisk</p>
+  <div class="comment">
+   <span class="markdown">An incident that has a risk of infection.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InjuryRisk">
+  <h3>InjuryRisk<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InjuryRisk</p>
+  <div class="comment">
+   <span class="markdown">An incident that carries a risk of injury.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#rsk003" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003">rsk003</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InSituCorrection">
+  <h3>InSituCorrection<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InSituCorrection</p>
+  <div class="comment">
+   <span class="markdown">Any corrective action with a correction made on place</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InterferenceRisk">
+  <h3>InterferenceRisk<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InterferenceRisk</p>
+  <div class="comment">
+   <span class="markdown">An incident that poses a risk of interference.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InVitroDiagnosticDevice">
+  <h3>InVitroDiagnosticDevice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InVitroDiagnosticDevice</p>
+  <div class="comment">
+   <span class="markdown">A device that can be used to in vitro diagnostic.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#dev016" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016">dev016</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MalfunctionRisk">
+  <h3>MalfunctionRisk<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MalfunctionRisk</p>
+  <div class="comment">
+   <span class="markdown">An incident that poses a risk of malfunction.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Manufacturer">
+  <h3>Manufacturer<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer</p>
+  <div class="comment">
+   <span class="markdown">A class that contains the data of European manufacturers of medical devices (name, country, authorization number).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MedicalDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice">MedicalDevice</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#authorizationNumber" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#authorizationNumber">authorizationNumber</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#competentAuthority" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#competentAuthority">competentAuthority</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#contactEmail" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#contactEmail">contactEmail</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#country" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#country">country</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#eudamedSrn" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedSrn">eudamedSrn</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#manufacturerId" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturerId">manufacturerId</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#manufacturesDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturesDevice">manufacturesDevice</a> <sup class="type-op" title="object property">op</sup>, <a href="#name" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#name">name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#reports" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reports">reports</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#isManufacturedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy">isManufacturedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#reportedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy">reportedBy</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#man001" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001">man001</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#man005" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man005">man005</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MaterialRisk">
+  <h3>MaterialRisk<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MaterialRisk</p>
+  <div class="comment">
+   <span class="markdown">An incident that represents a material risk.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MedicalDevice">
+  <h3>MedicalDevice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice</p>
+  <div class="comment">
+   <span class="markdown">The pattern that describes the set of classes of the Ontology.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>, <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>, <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>, <a href="#Manufacturer" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>, <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasRegulatoryFramework" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework">hasRegulatoryFramework</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#regulatesDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#regulatesDevice">regulatesDevice</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NearMissIncident">
+  <h3>NearMissIncident<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#NearMissIncident</p>
+  <div class="comment">
+   <span class="markdown">Incident almost gone.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#SeriousIncident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SeriousIncident">SeriousIncident</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RadiationRisk">
+  <h3>RadiationRisk<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RadiationRisk</p>
+  <div class="comment">
+   <span class="markdown">An incident that represents a radiation risk.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Recall">
+  <h3>Recall<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Recall</p>
+  <div class="comment">
+   <span class="markdown">Any corrective action that needs a recall.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RegulatoryFramework">
+  <h3>RegulatoryFramework<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RegulatoryFramework</p>
+  <div class="comment">
+   <span class="markdown">The regulatory framework for device.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#regulatesDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#regulatesDevice">regulatesDevice</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasRegulatoryFramework" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework">hasRegulatoryFramework</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#ivdr" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ivdr">ivdr</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#mdr" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#mdr">mdr</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Risk">
+  <h3>Risk<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk</p>
+  <div class="comment">
+   <span class="markdown">A class that contains a catalog of risks identified according to the IMDRF nomenclature.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MedicalDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice">MedicalDevice</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ContaminationRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ContaminationRisk">ContaminationRisk</a> <sup class="type-c" title="class">c</sup>, <a href="#CybersecurityRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CybersecurityRisk">CyberSecurityRisk</a> <sup class="type-c" title="class">c</sup>, <a href="#DiagnosticRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#DiagnosticRisk">DiagnosticRisk</a> <sup class="type-c" title="class">c</sup>, <a href="#InfectionRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InfectionRisk">InfectionRisk</a> <sup class="type-c" title="class">c</sup>, <a href="#InjuryRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InjuryRisk">InjuryRisk</a> <sup class="type-c" title="class">c</sup>, <a href="#InterferenceRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InterferenceRisk">InterferenceRisk</a> <sup class="type-c" title="class">c</sup>, <a href="#MalfunctionRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MalfunctionRisk">MalfunctionRisk</a> <sup class="type-c" title="class">c</sup>, <a href="#MaterialRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MaterialRisk">MaterialRisk</a> <sup class="type-c" title="class">c</sup>, <a href="#RadiationRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RadiationRisk">RadiationRisk</a> <sup class="type-c" title="class">c</sup>, <a href="#SoftwareRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SoftwareRisk">SoftwareRisk</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#affectsDeviceType" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#affectsDeviceType">affectsDeviceType</a> <sup class="type-op" title="object property">op</sup>, <a href="#description" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#imdrfCode" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#imdrfCode">imdrfCode</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isRiskOf" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRiskOf">isRiskOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#probability" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#probability">probability</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#riskCategory" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskCategory">riskCategory</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#riskId" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskId">riskId</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#riskName" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskName">riskName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#severity" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#severity">severity</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk">hasRisk</a> <sup class="type-op" title="object property">op</sup>, <a href="#isAffectedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isAffectedBy">isAffectedBy</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SafetyAlert">
+  <h3>SafetyAlert<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SafetyAlert</p>
+  <div class="comment">
+   <span class="markdown">Any corrective action that involves a health alert.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SelfTestDevice">
+  <h3>SelfTestDevice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SelfTestDevice</p>
+  <div class="comment">
+   <span class="markdown">A self test device.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SeriousIncident">
+  <h3>SeriousIncident<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SeriousIncident</p>
+  <div class="comment">
+   <span class="markdown">Serious incident.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#inc001" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001">inc001</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#NearMissIncident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#NearMissIncident">NearMissIncident</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SingleUseDevice">
+  <h3>SingeUseDevice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SingleUseDevice</p>
+  <div class="comment">
+   <span class="markdown">A device for a single use.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SoftwareRisk">
+  <h3>SoftwareRisk<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SoftwareRisk</p>
+  <div class="comment">
+   <span class="markdown">An incident that represents a software risk.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="UserNotice">
+  <h3>UserNotice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#UserNotice</p>
+  <div class="comment">
+   <span class="markdown">A corrective action noticed by user.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#affectsDeviceType" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#affectsDeviceType">affectsDeviceType</a></li>
+  <li><a href="#hasDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice">hasDevice</a></li>
+  <li><a href="#hasRegulatoryFramework" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework">hasRegulatoryFramework</a></li>
+  <li><a href="#hasRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk">hasRisk</a></li>
+  <li><a href="#isAffectedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isAffectedBy">isAffectedBy</a></li>
+  <li><a href="#isDeviceOf" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isDeviceOf">isDeviceOf</a></li>
+  <li><a href="#isManufacturedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy">isManufacturedBy</a></li>
+  <li><a href="#isRespondedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRespondedBy">isRespondedBy</a></li>
+  <li><a href="#isRiskOf" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRiskOf">isRiskOf</a></li>
+  <li><a href="#manufacturesDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturesDevice">manufacturesDevice</a></li>
+  <li><a href="#regulatesDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#regulatesDevice">regulatesDevice</a></li>
+  <li><a href="#reportedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy">reportedBy</a></li>
+  <li><a href="#reports" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reports">reports</a></li>
+  <li><a href="#respondsToIncident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident">respondsToIncident</a></li>
+ </ul>
+ <div class="entity" id="affectsDeviceType">
+  <h3>affectsDeviceType<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#affectsDeviceType</p>
+  <div class="comment">
+   <span class="markdown">This property show us which device is affected by the risk.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isAffectedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isAffectedBy">isAffectedBy</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDevice">
+  <h3>hasDevice<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice</p>
+  <div class="comment">
+   <span class="markdown">This property links the device and the incident.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isDeviceOf" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isDeviceOf">isDeviceOf</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasRegulatoryFramework">
+  <h3>hasRegulatoryFramework<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework</p>
+  <div class="comment">
+   <span class="markdown">This property links the device with the regulatory framework.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MedicalDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice">MedicalDevice</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#RegulatoryFramework" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RegulatoryFramework">RegulatoryFramework</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#regulatesDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#regulatesDevice">regulatesDevice</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasRisk">
+  <h3>hasRisk<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk</p>
+  <div class="comment">
+   <span class="markdown">This property links an Incident to the Risk identified.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isRiskOf" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRiskOf">isRiskOf</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isAffectedBy">
+  <h3>isAffectedBy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isAffectedBy</p>
+  <div class="comment">
+   <span class="markdown">This property shows the risk that affect at device</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#affectsDeviceType" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#affectsDeviceType">affectsDeviceType</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isDeviceOf">
+  <h3>isDeviceOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isDeviceOf</p>
+  <div class="comment">
+   <span class="markdown">This property links the incident and the device .</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice">hasDevice</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isManufacturedBy">
+  <h3>isManufacturedBy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy</p>
+  <div class="comment">
+   <span class="markdown">A property created to recognize the manufacturer for each device.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Manufacturer" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#manufacturesDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturesDevice">manufacturesDevice</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isRespondedBy">
+  <h3>isRespondedBy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRespondedBy</p>
+  <div class="comment">
+   <span class="markdown">This property shows which the relation betwees the incident and the corrective action.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#respondsToIncident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident">respondsToIncident</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isRiskOf">
+  <h3>isRiskOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRiskOf</p>
+  <div class="comment">
+   <span class="markdown">This property links the Risk that affect an Incident</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk">hasRisk</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="manufacturesDevice">
+  <h3>manufacturesDevice<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturesDevice</p>
+  <div class="comment">
+   <span class="markdown">A property created to recognize the manufacturer of the device.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Manufacturer" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isManufacturedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy">isManufacturedBy</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="regulatesDevice">
+  <h3>regulatesDevice<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#regulatesDevice</p>
+  <div class="comment">
+   <span class="markdown">This property links the the regulatory framework with the device.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#RegulatoryFramework" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RegulatoryFramework">RegulatoryFramework</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#MedicalDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#MedicalDevice">MedicalDevice</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasRegulatoryFramework" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework">hasRegulatoryFramework</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="reportedBy">
+  <h3>reportedBy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy</p>
+  <div class="comment">
+   <span class="markdown">This property shows which manufacturer reported the incident.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Manufacturer" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#reports" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reports">reports</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="reports">
+  <h3>reports<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reports</p>
+  <div class="comment">
+   <span class="markdown">This property shows which the incident of each manufacturer.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Manufacturer" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#reportedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy">reportedBy</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="respondsToIncident">
+  <h3>respondsToIncident<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident</p>
+  <div class="comment">
+   <span class="markdown">This property shows which the relation betwees the corrective action and the incident.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isRespondedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isRespondedBy">isRespondedBy</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#actionDate" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDate">actionDate</a></li>
+  <li><a href="#actionDescription" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDescription">actionDescription</a></li>
+  <li><a href="#authorizationNumber" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#authorizationNumber">authorizationNumber</a></li>
+  <li><a href="#closureDate" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#closureDate">closureDate</a></li>
+  <li><a href="#competentAuthority" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#competentAuthority">competentAuthority</a></li>
+  <li><a href="#contactEmail" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#contactEmail">contactEmail</a></li>
+  <li><a href="#correctiveActionTaken" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#correctiveActionTaken">correctiveActionTaken</a></li>
+  <li><a href="#countriesAffected" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countriesAffected">countriesAffected</a></li>
+  <li><a href="#country" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#country">country</a></li>
+  <li><a href="#countryReported" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countryReported">countryReported</a></li>
+  <li><a href="#description" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#description">description</a></li>
+  <li><a href="#detectionDate" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#detectionDate">detectionDate</a></li>
+  <li><a href="#deviceId" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceId">deviceId</a></li>
+  <li><a href="#deviceName" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceName">deviceName</a></li>
+  <li><a href="#devicesAffected" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#devicesAffected">devicesAffected</a></li>
+  <li><a href="#eudamedFscaRef" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedFscaRef">eudamedFscaRef</a></li>
+  <li><a href="#eudamedSrn" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedSrn">eudamedSrn</a></li>
+  <li><a href="#eudamedIncidentRef" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedIncidentRef">eudamendIncidentRef</a></li>
+  <li><a href="#eventDate" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eventDate">eventDate</a></li>
+  <li><a href="#fscaId" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fscaId">fcsaId</a></li>
+  <li><a href="#imdrfCode" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#imdrfCode">imdrfCode</a></li>
+  <li><a href="#incidentDescription" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentDescription">incidentDescription</a></li>
+  <li><a href="#incidentId" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentId">incidentId</a></li>
+  <li><a href="#intendedPurpose" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#intendedPurpose">intendedPurpose</a></li>
+  <li><a href="#isActive" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive">isActive</a></li>
+  <li><a href="#isImplantable" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable">isImplantable</a></li>
+  <li><a href="#isIvd" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd">isIvd</a></li>
+  <li><a href="#isReusable" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable">isReusable</a></li>
+  <li><a href="#manufacturerId" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturerId">manufacturerId</a></li>
+  <li><a href="#name" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#name">name</a></li>
+  <li><a href="#outcome" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#outcome">outcome</a></li>
+  <li><a href="#patientAge" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientAge">patientAge</a></li>
+  <li><a href="#patientSex" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientSex">patientSex</a></li>
+  <li><a href="#probability" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#probability">probability</a></li>
+  <li><a href="#reportDate" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportDate">reportDate</a></li>
+  <li><a href="#riskCategory" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskCategory">riskCategory</a></li>
+  <li><a href="#riskClass" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskClass">riskClass</a></li>
+  <li><a href="#riskId" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskId">riskId</a></li>
+  <li><a href="#riskName" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskName">riskName</a></li>
+  <li><a href="#scope" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#scope">scope</a></li>
+  <li><a href="#severity" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#severity">severity</a></li>
+  <li><a href="#status" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#status">status</a></li>
+  <li><a href="#udiDi" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#udiDi">udiDi</a></li>
+ </ul>
+ <div class="entity" id="actionDate">
+  <h3>actionDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDate</p>
+  <div class="comment">
+   <span class="markdown">This data property shows when the action was taken.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="actionDescription">
+  <h3>actionDescription<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDescription</p>
+  <div class="comment">
+   <span class="markdown">This data property shows when the action description.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="authorizationNumber">
+  <h3>authorizationNumber<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#authorizationNumber</p>
+  <div class="comment">
+   <span class="markdown">Data property thats shows the manufacturer authorization umber to operate.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Manufacturer" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="closureDate">
+  <h3>closureDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#closureDate</p>
+  <div class="comment">
+   <span class="markdown">This data property shows when the action was closed.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="competentAuthority">
+  <h3>competentAuthority<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#competentAuthority</p>
+  <div class="comment">
+   <span class="markdown">Data property thats shows the competent authority that supervise the manufacturer.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Manufacturer" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="contactEmail">
+  <h3>contactEmail<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#contactEmail</p>
+  <div class="comment">
+   <span class="markdown">Data property thats shows the manufacturer email address.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Manufacturer" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="correctiveActionTaken">
+  <h3>correctiveActionTaken<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#correctiveActionTaken</p>
+  <div class="comment">
+   <span class="markdown">This property shows the corrective acction because of the incident.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="countriesAffected">
+  <h3>countriesAffected<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countriesAffected</p>
+  <div class="comment">
+   <span class="markdown">This data property shows when the countries where the action was taken.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="country">
+  <h3>country<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#country</p>
+  <div class="comment">
+   <span class="markdown">Data property thats shows the manufacturer country.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Manufacturer" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="countryReported">
+  <h3>countryReported<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countryReported</p>
+  <div class="comment">
+   <span class="markdown">This property shows in wich country the incident was reported.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="description">
+  <h3>description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#description</p>
+  <div class="comment">
+   <span class="markdown">Data property that shows the risk description.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="detectionDate">
+  <h3>detectionDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#detectionDate</p>
+  <div class="comment">
+   <span class="markdown">This data property shows when the incident was detected.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="deviceId">
+  <h3>deviceId<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceId</p>
+  <div class="comment">
+   <span class="markdown">Data proptery that shows the device ID.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="deviceName">
+  <h3>deviceName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceName</p>
+  <div class="comment">
+   <span class="markdown">Data proptery that shows the device name.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="devicesAffected">
+  <h3>devicesAffected<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#devicesAffected</p>
+  <div class="comment">
+   <span class="markdown">This property shows the quantity of the devices wher the action must be implanted.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="eudamedFscaRef">
+  <h3>eudamedFscaRef<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedFscaRef</p>
+  <div class="comment">
+   <span class="markdown">This data property shows when the eudamed FSCA related to the action.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="eudamedSrn">
+  <h3>eudamedSrn<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedSrn</p>
+  <div class="comment">
+   <span class="markdown">Data property thats shows the manufacturer eudamed number.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Manufacturer" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="eudamedIncidentRef">
+  <h3>eudamendIncidentRef<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedIncidentRef</p>
+  <div class="comment">
+   <span class="markdown">This property shows the eudamed reference assigned to the incident.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="eventDate">
+  <h3>eventDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eventDate</p>
+  <div class="comment">
+   <span class="markdown">This data property shows when the incident was.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="fscaId">
+  <h3>fcsaId<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fscaId</p>
+  <div class="comment">
+   <span class="markdown">this data type shows the FCSA id.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="imdrfCode">
+  <h3>imdrfCode<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#imdrfCode</p>
+  <div class="comment">
+   <span class="markdown">Data property that shows the imdrf code linked to the risk.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="incidentDescription">
+  <h3>incidentDescription<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentDescription</p>
+  <div class="comment">
+   <span class="markdown">This property shows the incident description.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="incidentId">
+  <h3>incidentId<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentId</p>
+  <div class="comment">
+   <span class="markdown">This data property shows the incident id.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="intendedPurpose">
+  <h3>intendedPurpose<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#intendedPurpose</p>
+  <div class="comment">
+   <span class="markdown">Data proptery that shows the device intended purpose.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isActive">
+  <h3>isActive<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive</p>
+  <div class="comment">
+   <span class="markdown">Data proptery that shows the device needs energy to operate.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isImplantable">
+  <h3>isImplantable<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable</p>
+  <div class="comment">
+   <span class="markdown">Data proptery that shows the device is implantable.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isIvd">
+  <h3>isIvd<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd</p>
+  <div class="comment">
+   <span class="markdown">Data proptery that shows the device can be used for in vitro.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isReusable">
+  <h3>isReusable<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable</p>
+  <div class="comment">
+   <span class="markdown">Data proptery that shows the device is reusable.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="manufacturerId">
+  <h3>manufacturerId<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#manufacturerId</p>
+  <div class="comment">
+   <span class="markdown">Data property thats shows the manufacturer id.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Manufacturer" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="name">
+  <h3>name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#name</p>
+  <div class="comment">
+   <span class="markdown">Data property thats shows the manufacturer name.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Manufacturer" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="outcome">
+  <h3>outcome<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#outcome</p>
+  <div class="comment">
+   <span class="markdown">This data property shows the incident outcome.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="patientAge">
+  <h3>patientAge<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientAge</p>
+  <div class="comment">
+   <span class="markdown">This property shows the age of the patient involved in the incident</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="patientSex">
+  <h3>patientSex<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientSex</p>
+  <div class="comment">
+   <span class="markdown">This property shows the sex of the patient involved in the incident</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="probability">
+  <h3>probability<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#probability</p>
+  <div class="comment">
+   <span class="markdown">Data property that shows the probability of each risk.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="reportDate">
+  <h3>reportDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportDate</p>
+  <div class="comment">
+   <span class="markdown">This data property shows when the incident was reported.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Incident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="riskCategory">
+  <h3>riskCategory<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskCategory</p>
+  <div class="comment">
+   <span class="markdown">Data property that showsa risks categorization.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="riskClass">
+  <h3>riskClass<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskClass</p>
+  <div class="comment">
+   <span class="markdown">Data proptery that shows the device class risk.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="riskId">
+  <h3>riskId<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskId</p>
+  <div class="comment">
+   <span class="markdown">Data property that shows the identification number.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="riskName">
+  <h3>riskName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskName</p>
+  <div class="comment">
+   <span class="markdown">Data property that shows the risk name..</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="scope">
+  <h3>scope<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#scope</p>
+  <div class="comment">
+   <span class="markdown">This data property shows the action scope.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="severity">
+  <h3>severity<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#severity</p>
+  <div class="comment">
+   <span class="markdown">Data property that shows the risk severity.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Risk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="status">
+  <h3>status<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#status</p>
+  <div class="comment">
+   <span class="markdown">This data property shows the action status.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="udiDi">
+  <h3>udiDi<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#udiDi</p>
+  <div class="comment">
+   <span class="markdown">Data proptery that shows the device UDI, string because ().</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description"> <span>description</span> </a></li>
+  <li><a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"> <span>is Rule Enabled</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://www.w3.org/2000/01/rdf-schema#license" title="http://www.w3.org/2000/01/rdf-schema#license"> <span>license</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#prefLabel" title="http://www.w3.org/2004/02/skos/core#prefLabel"> <span>pref Label</span> </a></li>
+  <li><a href="#http://www.w3.org/2000/01/rdf-schema#sameAs" title="http://www.w3.org/2000/01/rdf-schema#sameAs"> <span>same As</span> </a></li>
+  <li><a href="#terms:creator" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#terms:creator"> <span>terms:creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title"> <span>title</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/created">
+  <h3>created<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/description</p>
+ </div>
+ <div class="entity" id="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+  <h3>is Rule Enabled<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2000/01/rdf-schema#license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2000/01/rdf-schema#license</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#prefLabel">
+  <h3>pref Label<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#prefLabel</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2000/01/rdf-schema#sameAs">
+  <h3>same As<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2000/01/rdf-schema#sameAs</p>
+ </div>
+ <div class="entity" id="terms:creator">
+  <h3>terms:creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#terms:creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/title</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#dev001" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001"> <span>dev001</span> </a></li>
+  <li><a href="#dev016" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016"> <span>dev016</span> </a></li>
+  <li><a href="#fsca001" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fsca001"> <span>fsca001</span> </a></li>
+  <li><a href="#inc001" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001"> <span>inc001</span> </a></li>
+  <li><a href="#ivdr" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ivdr"> <span>ivdr</span> </a></li>
+  <li><a href="#man001" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001"> <span>man001</span> </a></li>
+  <li><a href="#man005" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man005"> <span>man005</span> </a></li>
+  <li><a href="#mdr" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#mdr"> <span>mdr</span> </a></li>
+  <li><a href="#rsk003" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003"> <span>rsk003</span> </a></li>
+ </ul>
+ <div class="entity" id="dev001">
+  <h3>dev001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ImplantableActiveDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableActiveDevice">ImplantableActiveDevice</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasRegulatoryFramework" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework">hasRegulatoryFramework</a> <sup class="type-op" title="object property">op</sup> <a href="#mdr" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#mdr">mdr</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#isManufacturedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy">isManufacturedBy</a> <sup class="type-op" title="object property">op</sup> <a href="#man001" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001">man001</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#deviceName" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceName">deviceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"HeartMate 3 LVAD"</span>
+   </dd>
+   <dd>
+    <a href="#intendedPurpose" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#intendedPurpose">intendedPurpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Ventricular assist device for end-stage heart failure"</span>
+   </dd>
+   <dd>
+    <a href="#isActive" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive">isActive</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#isImplantable" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable">isImplantable</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#isIvd" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd">isIvd</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#isReusable" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable">isReusable</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#riskClass" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskClass">riskClass</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"ClassIII"</span>
+   </dd>
+   <dd>
+    <a href="#udiDi" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#udiDi">udiDi</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"(01)00380740009095"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="dev016">
+  <h3>dev016<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev016</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#InVitroDiagnosticDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InVitroDiagnosticDevice">InVitroDiagnosticDevice</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#isManufacturedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isManufacturedBy">isManufacturedBy</a> <sup class="type-op" title="object property">op</sup> <a href="#man005" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man005">man005</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#deviceName" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#deviceName">deviceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"cobas e 801 Immunoassay Analyzer"</span>
+   </dd>
+   <dd>
+    <a href="#intendedPurpose" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#intendedPurpose">intendedPurpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Automated immunoassay analyzer for clinical laboratory"</span>
+   </dd>
+   <dd>
+    <a href="#isActive" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive">isActive</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#isImplantable" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isImplantable">isImplantable</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#isIvd" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd">isIvd</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#isReusable" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isReusable">isReusable</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#riskClass" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskClass">riskClass</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"ClassC"</span>
+   </dd>
+   <dd>
+    <a href="#udiDi" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#udiDi">udiDi</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"(01)04015630001016"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="fsca001">
+  <h3>fsca001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#fsca001</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#respondsToIncident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident">respondsToIncident</a> <sup class="type-op" title="object property">op</sup> <a href="#inc001" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001">inc001</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#actionDate" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#actionDate">actionDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2024-02-01"^^<a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> </span>
+   </dd>
+   <dd>
+    <a href="#devicesAffected" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#devicesAffected">devicesAffected</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"850"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#eudamedFscaRef" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedFscaRef">eudamedFscaRef</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"EU-FSCA-2024-000001"</span>
+   </dd>
+   <dd>
+    <a href="#scope" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#scope">scope</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"All HeartMate 3 LVAD units implanted since 2020"</span>
+   </dd>
+   <dd>
+    <a href="#status" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#status">status</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"open"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="inc001">
+  <h3>inc001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#inc001</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#SeriousIncident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SeriousIncident">SeriousIncident</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasDevice">hasDevice</a> <sup class="type-op" title="object property">op</sup> <a href="#dev001" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#dev001">dev001</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRisk">hasRisk</a> <sup class="type-op" title="object property">op</sup> <a href="#rsk003" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003">rsk003</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#reportedBy" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportedBy">reportedBy</a> <sup class="type-op" title="object property">op</sup> <a href="#man001" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001">man001</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#correctiveActionTaken" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#correctiveActionTaken">correctiveActionTaken</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#countryReported" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#countryReported">countryReported</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Germany"</span>
+   </dd>
+   <dd>
+    <a href="#detectionDate" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#detectionDate">detectionDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2024-01-10"^^<a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> </span>
+   </dd>
+   <dd>
+    <a href="#eudamedIncidentRef" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedIncidentRef">eudamendIncidentRef</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"EU-INC-2024-000001"</span>
+   </dd>
+   <dd>
+    <a href="#eventDate" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eventDate">eventDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2024-01-08"^^<a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> </span>
+   </dd>
+   <dd>
+    <a href="#incidentDescription" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#incidentDescription">incidentDescription</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Patient implanted with HeartMate 3 LVAD developed ischemic stroke 6 months post-implant. Device thrombus confirmed by echocardiography."</span>
+   </dd>
+   <dd>
+    <a href="#outcome" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#outcome">outcome</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Serious patient injury - embolic stroke"</span>
+   </dd>
+   <dd>
+    <a href="#patientAge" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientAge">patientAge</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"58"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#patientSex" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#patientSex">patientSex</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Male"</span>
+   </dd>
+   <dd>
+    <a href="#reportDate" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#reportDate">reportDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2024-01-15"^^<a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ivdr">
+  <h3>ivdr<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ivdr</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#RegulatoryFramework" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RegulatoryFramework">RegulatoryFramework</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="man001">
+  <h3>man001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man001</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Manufacturer" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#authorizationNumber" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#authorizationNumber">authorizationNumber</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"IE/2017/001234"</span>
+   </dd>
+   <dd>
+    <a href="#competentAuthority" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#competentAuthority">competentAuthority</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Health Products Regulatory Authority (HPRA)"</span>
+   </dd>
+   <dd>
+    <a href="#contactEmail" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#contactEmail">contactEmail</a> <sup class="type-dp" title="data property">dp</sup> <a href="regulatory@medtronic.com" target="_blank">regulatory@medtronic.com</a>
+   </dd>
+   <dd>
+    <a href="#country" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#country">country</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Ireland"</span>
+   </dd>
+   <dd>
+    <a href="#eudamedSrn" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedSrn">eudamedSrn</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"SRN-IE-MED-0001"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Medtronic plc"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="man005">
+  <h3>man005<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#man005</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Manufacturer" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#authorizationNumber" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#authorizationNumber">authorizationNumber</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"DE/2017/007890"</span>
+   </dd>
+   <dd>
+    <a href="#competentAuthority" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#competentAuthority">competentAuthority</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Bundesinstitut fÃ¼r Arzneimittel und Medizinprodukte (BfArM"</span>
+   </dd>
+   <dd>
+    <a href="#contactEmail" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#contactEmail">contactEmail</a> <sup class="type-dp" title="data property">dp</sup> <a href="regulatory@roche.com" target="_blank">regulatory@roche.com</a>
+   </dd>
+   <dd>
+    <a href="#country" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#country">country</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Germany"</span>
+   </dd>
+   <dd>
+    <a href="#eudamedSrn" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#eudamedSrn">eudamedSrn</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"SRN-DE-MED-0005"</span>
+   </dd>
+   <dd>
+    <a href="#name" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#name">name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Roche Diagnostics GmbH"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="mdr">
+  <h3>mdr<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#mdr</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#RegulatoryFramework" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#RegulatoryFramework">RegulatoryFramework</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="rsk003">
+  <h3>rsk003<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#rsk003</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ImplantableActiveDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#ImplantableActiveDevice">ImplantableActiveDevice</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#InjuryRisk" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InjuryRisk">InjuryRisk</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#imdrfCode" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#imdrfCode">imdrfCode</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"A0201"</span>
+   </dd>
+   <dd>
+    <a href="#probability" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#probability">probability</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Low"</span>
+   </dd>
+   <dd>
+    <a href="#riskCategory" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskCategory">riskCategory</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Patient Harm"</span>
+   </dd>
+   <dd>
+    <a href="#riskName" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#riskName">riskName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Thrombosis - device-related"</span>
+   </dd>
+   <dd>
+    <a href="#severity" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#severity">severity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Critical"</span>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
+ <h3 id="swrlrules" class="list">SWRL rules</h3>
+ <ul class="hlist">
+  <li><a href="#d4e2062">S2</a></li>
+  <li><a href="#d4e1962">S3</a></li>
+  <li><a href="#d4e1880">S4</a></li>
+ </ul>
+ <div class="entity" id="d4e2062">
+  <h3>S2<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>SelfTestDevice<br><br><a href="#isActive" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isActive">isActive</a> <sup class="type-dp" title="data property">dp</sup>(?d,"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>) , <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>(?d) , <a href="#isIvd" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#isIvd">isIvd</a> <sup class="type-dp" title="data property">dp</sup>(?d,"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>) -&gt; <a href="#SelfTestDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SelfTestDevice">SelfTestDevice</a> <sup class="type-c" title="class">c</sup>(?d)</p>
+ </div>
+ <div class="entity" id="d4e1962">
+  <h3>S3<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><br><br><a href="#CorrectiveAction" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>(?meddevices:f) , <a href="#respondsToIncident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#respondsToIncident">respondsToIncident</a> <sup class="type-op" title="object property">op</sup>(?meddevices:f,?meddevices:i) , <a href="#SeriousIncident" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SeriousIncident">SeriousIncident</a> <sup class="type-c" title="class">c</sup>(?meddevices:i) -&gt; <a href="#SafetyAlert" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#SafetyAlert">SafetyAlert</a> <sup class="type-c" title="class">c</sup>(?meddevices:f)</p>
+ </div>
+ <div class="entity" id="d4e1880">
+  <h3>S4<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>IVDR<br><br><a href="#InVitroDiagnosticDevice" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#InVitroDiagnosticDevice">InVitroDiagnosticDevice</a> <sup class="type-c" title="class">c</sup>(?d) , <a href="#Device" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#Device">Device</a> <sup class="type-c" title="class">c</sup>(?d) -&gt; <a href="#hasRegulatoryFramework" title="http://www.semanticweb.org/marmi/ontologies/2026/3/meddevices#hasRegulatoryFramework">hasRegulatoryFramework</a> <sup class="type-op" title="object property">op</sup>(?d,?ivdr)</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
